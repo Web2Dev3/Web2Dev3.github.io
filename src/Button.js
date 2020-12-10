@@ -7,6 +7,6 @@ const Button = (props) => {
 	);
 };
 
-const string = 'hi';
+const string = 'hello!';
 
 export {Button, string};
