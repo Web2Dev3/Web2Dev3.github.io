@@ -4,7 +4,7 @@ const Paragraph = (props) => {
    const {text} = props;
    return (
 	<div>
-	<p style={{color: 'pink', backgroundColor: 'maroon'}}>{text}</p>
+	<p style={{color: 'pink', backgroundColor: 'maroon', textAlign: 'center'}}>{text}</p>
 	</div>);
 };
 
