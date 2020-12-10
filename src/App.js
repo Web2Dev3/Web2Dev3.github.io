@@ -8,14 +8,13 @@ import MoviePreviews from './movies (2)';
 import MovieDetail from './movieDetail';
 
 function App() {
-
 const [currentMovie, setCurrentMovie] = React.useState(null);
-
-   const [count, setCount] = React.useState(0);
     return (
-        <div>
-<h1>Movie Information</h1>
-	<main  style={{display: 'flex', flexDirection: 'row'}}>
+        <div style={{backgroundColor:'aliceblue'}}>
+<h1 style={{textAlign:'center', color:'navy', fontWeight:'bold'}}>Movie Information</h1>
+<Button buttonText={'Welcome to React!'} onClickFunction={() => alert(string)}/>
+<Paragraph text={'Please Select a Movie'}/>
+	<main  style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
         {movies.map( (movie) => {
 		return (
 			<MoviePreviews
@@ -23,27 +22,16 @@ const [currentMovie, setCurrentMovie] = React.useState(null);
 			 movie={movie} onClickFunction={setCurrentMovie}/>
 		)
 	}) } </main>
+	 <Button buttonText={'Close Movie'} onClickFunction={() => setCurrentMovie(null)}/>
 	{
 		currentMovie ?
 	<MovieDetail currentMovie={currentMovie}/>
 		:
-	<p>No movie selected.</p>
+	<p style={{textAlign:'center', color:'navy', fontWeight:'bold'}}>No movie selected.</p>
 	}
 
-<Paragraph text={'Hello'}/>
-<Paragraph text={'This is a paragraph.'}/>
-<Paragraph text={'This is another paragraph.'}/>
-<Paragraph text={'Made with React.'}/>
-<Button buttonText={'Greetings!'} onClickFunction={() => alert(string)}/>
- <p>{count}</p>
-
-           <Button buttonText={'Reset'} onClickFunction={() => setCount(0)}/>
-     <Button buttonText={'Click to Add'} onClickFunction={() => setCount(count + 1)}/>
-     <Button buttonText={'Click to Subtract'} onClickFunction={() => setCount(count - 1)}/>
 </div>
   );
 
-
 }
-
 export default App;
