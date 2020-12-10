@@ -21,9 +21,8 @@ backgroundColor: '#F2EDEB',
 	return (
 		<button key={movie.title} style={movieStyle} onClick={() => {onClickFunction(movie)}}>
 		<h4 style={{color: 'cornflowerblue'}}>{movie.title}</h4> 
-		<p style={{color: 'navy'}}>{movie.rating}</p> 
-		<p style={{color: 'cornflowerblue'}}>{movie.director}</p>
-		<p style={{color: 'navy'}}>{movie.releaseYear}</p>  
+		<img style={{width:'55%'}} src={movie.posterUrl} alt={movie.title}/>
+		<p style={{color: 'navy'}}>{movie.rating}</p>   
 		</button>
 		)
 
